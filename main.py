@@ -26,7 +26,7 @@ turtle.colormode(255)
 dot.penup()
 start_pos = (-225, -225)
 dot.goto(start_pos)
-dot.pendown()
+
 
 for _ in range(10):
     for _ in range(10):
@@ -34,15 +34,12 @@ for _ in range(10):
         dot.color(colour)
         dot.dot(size=30)
         dot.stamp()
-        dot.penup()
         move = dot.xcor() + 50
         dot.setx(move)
-        dot.pendown()
+
     move_up = dot.ycor() + 50
-    dot.penup()
     dot.setx(-225)
     dot.sety(move_up)
-    dot.pendown()
 
 screen = Screen()
 screen.screensize(200, 200)
