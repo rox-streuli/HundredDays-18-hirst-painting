@@ -31,7 +31,7 @@ dot.pendown()
 for _ in range(10):
     colour = choice(colour_list)
     dot.color(colour)
-    dot.dot(size=20)
+    dot.dot(size=30)
     dot.stamp()
     dot.penup()
     move = dot.xcor() + 50
@@ -39,5 +39,5 @@ for _ in range(10):
     dot.pendown()
 
 screen = Screen()
-# screen.screensize(600, 600)
+screen.screensize(200, 200)
 screen.exitonclick()
