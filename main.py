@@ -20,8 +20,9 @@ colour_list = [(17, 22, 51), (156, 72, 49), (199, 149, 115), (45, 26, 15),
                (167, 207, 198), (165, 204, 211)]
 
 dot = Turtle()
-turtle.colormode(255)
 dot.hideturtle()
+turtle.colormode(255)
+
 dot.penup()
 start_pos = (-225, -225)
 dot.goto(start_pos)
@@ -29,8 +30,8 @@ dot.pendown()
 
 for _ in range(10):
     colour = choice(colour_list)
-    dot.dot(size=20)
     dot.color(colour)
+    dot.dot(size=20)
     dot.stamp()
     dot.penup()
     move = dot.xcor() + 50
