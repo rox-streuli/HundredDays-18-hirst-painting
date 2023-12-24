@@ -29,13 +29,19 @@ dot.goto(start_pos)
 dot.pendown()
 
 for _ in range(10):
-    colour = choice(colour_list)
-    dot.color(colour)
-    dot.dot(size=30)
-    dot.stamp()
+    for _ in range(10):
+        colour = choice(colour_list)
+        dot.color(colour)
+        dot.dot(size=30)
+        dot.stamp()
+        dot.penup()
+        move = dot.xcor() + 50
+        dot.setx(move)
+        dot.pendown()
+    move_up = dot.ycor() + 50
     dot.penup()
-    move = dot.xcor() + 50
-    dot.setx(move)
+    dot.setx(-225)
+    dot.sety(move_up)
     dot.pendown()
 
 screen = Screen()
